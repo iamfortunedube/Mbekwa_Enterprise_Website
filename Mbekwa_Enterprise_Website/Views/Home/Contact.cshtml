@@ -1,0 +1,49 @@
+﻿@model Mbekwa_Enterprise_Website.Models.Contact
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<h1 class="h1-sub">Contact</h1>
+@ViewBag.message
+<form asp-controller="home" asp-action="contact">
+    <table cellpadding="2" cellspacing="2">
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" asp-for="Name" class="form-control" />
+            </td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>
+                <input type="text" asp-for="Phone" class="form-control" />
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="text" asp-for="EmailAddress" class="form-control" />
+            </td>
+        </tr>
+        <tr>
+            <td>Subject</td>
+            <td>
+                <input type="text" asp-for="Subject" class="form-control" />
+            </td>
+        </tr>
+        <tr>
+            <td>Message</td>
+            <td>
+                <textarea cols="20" rows="5" asp-for="Message" class="form-control">
+                    
+                </textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <input type="submit" value="Send" class="form-control" />
+            </td>
+        </tr>
+    </table>
+</form>
